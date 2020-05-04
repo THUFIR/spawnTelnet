@@ -10,3 +10,5 @@ while { ![tutstack::empty $stack] } {
 }
 
 tutstack::destroy $stack
+
+tutstack::hello

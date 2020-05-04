@@ -12,6 +12,12 @@ namespace eval ::tutstack {
     variable id 0
 }
 
+
+
+proc ::tutstack::hello {} {
+puts "hello world"
+}
+
 # Create a new stack
 proc ::tutstack::create {} {
     variable stack
