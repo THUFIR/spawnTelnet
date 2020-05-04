@@ -1,4 +1,5 @@
-lappend auto_path /home/thufir/tcl/telnet/api
+lappend auto_path /home/thufir/NetBeansProjects/spawnTelnet/telnet/api
+
 package require weather 1.0
 
 set stack [tutstack::create]
