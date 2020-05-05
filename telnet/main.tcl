@@ -8,4 +8,14 @@ tutstack::hello
 
 set x 0
 
+
+
+
 puts $x
+
+
+
+
+set A 3
+set B 4
+puts "The hypotenuse of a triangle: [expr {tutstack::sum($A,$B)}]"
