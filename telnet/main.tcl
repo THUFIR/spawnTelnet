@@ -8,4 +8,5 @@ tutstack::hello
 
 set A 3
 set B 4
-puts "The sum: [expr {tutstack::sum($A,$B)}]"
+
+puts [tutstack::sum $A $B]
