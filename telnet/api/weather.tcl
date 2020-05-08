@@ -7,8 +7,7 @@ namespace eval ::tutstack {
 }
 
 proc ::tutstack::connect {arg1} {
-	puts "got $arg1"
-set env(DISPLAY) chilli:0
+puts "got $arg1"
 spawn telnet rainmaker.wunderground.com
 set telnet $spawn_id
 expect -nocase "Press Return to continue:"
