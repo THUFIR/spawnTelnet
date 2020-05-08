@@ -26,3 +26,7 @@ set telnet $spawn_id
 expect -nocase "Press Return to continue:"
 send  "\r"
 }
+
+proc ::tutstack::dummy {arg1} {
+	puts "got $arg1"
+}
