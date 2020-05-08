@@ -1,5 +1,7 @@
 package provide weather  1.0
 package require Tcl      8.5
+package require Expect
+
 
 namespace eval ::tutstack {
 }
