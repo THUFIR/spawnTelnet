@@ -11,6 +11,7 @@ puts "got $arg1"
 spawn telnet rainmaker.wunderground.com
 set telnet $spawn_id
 expect -nocase "Press Return to continue:"
-send  "$arg1"
+send  ""
+interact
 }
 
