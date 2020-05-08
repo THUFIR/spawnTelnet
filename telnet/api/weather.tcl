@@ -20,6 +20,7 @@ proc ::tutstack::helloWorld {arg1} {
 
 
 proc ::tutstack::connect {arg1} {
+	puts "got $arg1"
 set env(DISPLAY) chilli:0
 spawn telnet rainmaker.wunderground.com
 set telnet $spawn_id
@@ -27,6 +28,3 @@ expect -nocase "Press Return to continue:"
 send  "\r"
 }
 
-proc ::tutstack::dummy {arg1} {
-	puts "got $arg1"
-}
