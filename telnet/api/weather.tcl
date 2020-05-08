@@ -15,5 +15,5 @@ proc ::tutstack::sum {arg1 arg2} {
 }
 
 proc ::tutstack::helloWorld {arg1} {
-	puts "hello world"
+	return "hello plus arg"
 }

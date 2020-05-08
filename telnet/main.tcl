@@ -12,4 +12,7 @@ set B 4
 puts [tutstack::sum $A $B]
 
 
-#tutstack::helloWorld("fred")
+puts [tutstack::hello "fred"]
+
+
+
