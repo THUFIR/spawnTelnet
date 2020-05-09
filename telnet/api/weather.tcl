@@ -15,8 +15,8 @@ interact \004 return
 proc ::tutstack::connect {city} {
 spawn telnet rainmaker.wunderground.com
 set telnet $spawn_id
-interact
-#parse city
+#interact
+parse city
 }
 
 
