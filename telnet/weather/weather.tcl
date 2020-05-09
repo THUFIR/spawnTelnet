@@ -1,21 +1,19 @@
 package provide weather  1.0
 package require Expect
 
-namespace eval ::tutstack {
+namespace eval ::wunderground {
+}
+
+
+proc ::tutstack::connect {city} {
+    variable telnet [spawn telnet rainmaker.wunderground.com]
+    parse $city
 }
 
 proc ::tutstack::parse {city} {
-puts "getting weather for $city"
-expect -nocase "Press Return to continue:"
-#interact \004 return
-interact \004 return
+    variable telnet
+    puts "getting weather for $city"
+    expect -i $telnet -nocase "Press Return to continue:"
+    # You *might* need inter_return instead of return; the documentation isn't clear
+    interact -i $telnet "\004" return
 }
-
-proc ::tutstack::connect {city} {
-spawn telnet rainmaker.wunderground.com
-set telnet $spawn_id
-#interact
-parse $city
-}
-
-
