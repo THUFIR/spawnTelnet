@@ -4,15 +4,19 @@ package require Expect
 namespace eval ::wunderground {
 }
 
-proc ::wunderground::connect {city} {
-    variable telnet [spawn telnet rainmaker.wunderground.com]
-    parse $city
-}
+
 
 proc ::wunderground::parse {city} {
-    variable telnet
+    global spawn_id
     puts "getting weather for $city"
-    expect -i $telnet -nocase "Press Return to continue:"
+    expect -nocase "Press Return to continue:"
     # You *might* need inter_return instead of return; the documentation isn't clear
-    interact -i $telnet "\004" return
+    interact "\004" return
+}
+
+proc ::wunderground::connect {city} {
+    global spawn_id
+    spawn telnet rainmaker.wunderground.com
+    set telnet $spawn_id
+    parse $city
 }
