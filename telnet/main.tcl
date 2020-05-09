@@ -1,6 +1,5 @@
-lappend auto_path /home/thufir/NetBeansProjects/spawnTelnet/telnet/api
+lappend auto_path /home/thufir/NetBeansProjects/spawnTelnet/telnet/chained
 
-package require weather 1.0
+package require chained 1.0
 
-
-tutstack::connect "nyc"
+example::first "Alice"
