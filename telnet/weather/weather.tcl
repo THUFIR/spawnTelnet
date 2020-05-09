@@ -5,12 +5,12 @@ namespace eval ::wunderground {
 }
 
 
-proc ::tutstack::connect {city} {
+proc ::wunderground::connect {city} {
     variable telnet [spawn telnet rainmaker.wunderground.com]
     parse $city
 }
 
-proc ::tutstack::parse {city} {
+proc ::wunderground::parse {city} {
     variable telnet
     puts "getting weather for $city"
     expect -i $telnet -nocase "Press Return to continue:"
