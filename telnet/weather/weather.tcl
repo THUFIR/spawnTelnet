@@ -4,7 +4,6 @@ package require Expect
 namespace eval ::wunderground {
 }
 
-
 proc ::wunderground::connect {city} {
     variable telnet [spawn telnet rainmaker.wunderground.com]
     parse $city
