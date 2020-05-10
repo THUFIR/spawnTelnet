@@ -16,6 +16,18 @@ proc ::wunderground::connect {city} {
 }
 
 proc ::wunderground::parse {city} {
+#    variable telnet [spawn telnet rainmaker.wunderground.com]
+#    parse $city
+#    puts "getting weather for $city"
+    # expect -i $telnet -nocase "Press Return to continue:"
+    # You *might* need inter_return instead of return; the documentation isn't clear
+    puts "parse $city"
+    interact $telnet
+	# "\004" return
+#    interact
+}
+
+proc ::wunderground::old {city} {
     variable telnet
     puts "getting weather for $city"
     expect -i $telnet -nocase "Press Return to continue:"
