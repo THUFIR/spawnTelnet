@@ -9,7 +9,7 @@ proc ::wunderground::noControlFlow {city} {
     variable telnet [spawn telnet rainmaker.wunderground.com]
     puts "getting weather for $city"
     interact {
-	"n" {send "nyc"}
+	"/n" {send "nyc"}
     }
 }
 
