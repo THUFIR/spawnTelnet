@@ -11,7 +11,8 @@ proc ::wunderground::parse {city} {
     puts "getting weather for $city"
     expect -nocase "Press Return to continue:"
     # You *might* need inter_return instead of return; the documentation isn't clear
-    interact "\004" return
+    #interact "\004" return
+    interact
 }
 
 proc ::wunderground::connect {city} {
