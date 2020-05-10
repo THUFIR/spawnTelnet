@@ -4,13 +4,38 @@ package require Expect
 namespace eval ::wunderground {
 }
 
+
+
+
+
+proc ::wunderground::noControlFlow {city} {
+    variable telnet [spawn telnet rainmaker.wunderground.com]
+#    parse $city
+    puts "getting weather for $city"
+    # expect -i $telnet -nocase "Press Return to continue:"
+    # You *might* need inter_return instead of return; the documentation isn't clear
+
+#	parse $city
+
+
+#    interact $telnet
+	# "\004" return
+    interact
+}
+
+
+
 proc ::wunderground::connect {city} {
     variable telnet [spawn telnet rainmaker.wunderground.com]
 #    parse $city
     puts "getting weather for $city"
     # expect -i $telnet -nocase "Press Return to continue:"
     # You *might* need inter_return instead of return; the documentation isn't clear
-    interact $telnet
+
+	parse $city
+
+
+#    interact $telnet
 	# "\004" return
 #    interact
 }
@@ -21,10 +46,13 @@ proc ::wunderground::parse {city} {
 #    puts "getting weather for $city"
     # expect -i $telnet -nocase "Press Return to continue:"
     # You *might* need inter_return instead of return; the documentation isn't clear
+
     puts "parse $city"
-    interact $telnet
+    variable telnet
+
+#    interact $telnet
 	# "\004" return
-#    interact
+    interact
 }
 
 proc ::wunderground::old {city} {
