@@ -17,10 +17,10 @@ proc ::wunderground::noControlFlow {city} {
     expect "or enter 3 letter forecast city code--"
     send "$city\r"
 
-    expect "Enter 3-letter city code:"
-    send "$city\r"
+#    expect "Enter 3-letter city code:"
+#    send "$city\r"
 
-    interact
+#    interact
 
     expect "X to exit"
     send "x"
