@@ -8,13 +8,16 @@ namespace eval ::wunderground {
 proc ::wunderground::noControlFlow {city} {
     variable telnet [spawn telnet rainmaker.wunderground.com]
     puts "getting weather for $city"
-    interact
+    interact {
+	"n" {send "nyc"}
+    }
 }
 
 
 
 #seems to run
 proc ::wunderground::connect {city} {
+    global spawn_id
     variable telnet [spawn telnet rainmaker.wunderground.com]
     puts "getting weather for $city"
     parse $city
@@ -23,6 +26,7 @@ proc ::wunderground::connect {city} {
 
 #hangs after the puts; no telnet connection output
 proc ::wunderground::parse {city} {
+    global spawn_id
     puts "received $city"
     variable telnet
     interact -i $telnet
