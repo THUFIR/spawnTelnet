@@ -8,9 +8,21 @@ namespace eval ::wunderground {
 proc ::wunderground::noControlFlow {city} {
     variable telnet [spawn telnet rainmaker.wunderground.com]
     puts "getting weather for $city"
-    interact {
-	"/n" {send "nyc"}
-    }
+
+
+    expect "Press Return to continue:"
+    send "\r"
+
+
+    expect "or enter 3 letter forecast city code--"
+    send "$city\r"
+
+    expect "X to exit"
+    send "x"
+
+#    interact {
+#	"/n" {send "nyc"}
+#    }
 }
 
 
