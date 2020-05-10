@@ -13,7 +13,7 @@ proc ::wunderground::noControlFlow {city} {
 
 
 
-#hangs
+#seems to run
 proc ::wunderground::connect {city} {
     variable telnet [spawn telnet rainmaker.wunderground.com]
     puts "getting weather for $city"
@@ -21,13 +21,11 @@ proc ::wunderground::connect {city} {
 }
 
 
+#hangs after the puts; no telnet connection output
 proc ::wunderground::parse {city} {
     puts "received $city"
     variable telnet
-
-#    interact $telnet
-	# "\004" return
-    interact
+    interact -i $telnet
 }
 
 #works
