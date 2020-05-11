@@ -17,10 +17,9 @@ proc ::wunderground::noControlFlow {city} {
     expect "or enter 3 letter forecast city code--"
     send "$city\r"
 
-    expect "X to exit"
-    send "x"
 
 }
+
 
 
 
@@ -41,11 +40,3 @@ proc ::wunderground::parse {city} {
     interact -i $telnet
 }
 
-#works
-proc ::wunderground::old {city} {
-    variable telnet
-    puts "getting weather for $city"
-    expect -i $telnet -nocase "Press Return to continue:"
-    # You *might* need inter_return instead of return; the documentation isn't clear
-    interact -i $telnet "\004" return
-}
