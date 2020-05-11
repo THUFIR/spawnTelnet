@@ -7,7 +7,7 @@ package require locations 1.0
 
 set cities [cities::listCities]
 
-puts "locations\n--------\n$cities"
+puts "locations\n---------\n$cities"
 
 
 #################
