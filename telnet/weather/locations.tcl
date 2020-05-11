@@ -6,7 +6,9 @@ namespace eval ::cities {
 proc ::cities::listCities {} {
 
 
-set cities {{x} {y} {z}}
+set cities {}
+lappend cities "red" 
+lappend cities "green" 
 
 return $cities
 }

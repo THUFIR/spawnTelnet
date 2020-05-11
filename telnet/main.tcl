@@ -10,7 +10,7 @@ set cities [cities::listCities]
 puts "locations\n--------\n$cities"
 
 
-
+#################
 
 
 puts "\n\n\nconnect to wunderground with:"
