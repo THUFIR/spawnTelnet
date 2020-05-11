@@ -5,6 +5,31 @@ package require locations 1.0
 
 
 
-set b [cities::listCities]
+set cities [cities::listCities]
 
-puts "$b"
+puts "locations\n--------\n$cities"
+
+
+
+
+
+puts "\n\n\nconnect to wunderground with:"
+puts "-----------------------------"
+puts "1)\tnoControlFlow"
+puts "2)\tconnect\n\n"
+
+
+puts -nonewline "connection method: "
+flush stdout
+gets stdin prompt
+puts "connecting with $prompt"
+
+
+if {$prompt == 1 } {
+   wunderground::noControlFlow "nyc"
+} else {
+   wunderground::connect "nyc"
+}
+
+
+

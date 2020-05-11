@@ -8,7 +8,5 @@ proc ::cities::listCities {} {
 
 set cities {{x} {y} {z}}
 
-puts "locations\n--------\n$cities"
-
 return $cities
 }
