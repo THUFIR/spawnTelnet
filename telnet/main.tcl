@@ -5,7 +5,7 @@ package require locations 1.0
 
 
 
-set cities [cities::listCities]
+set cities [cities::dictionary]
 
 puts "locations\n---------\n$cities"
 
