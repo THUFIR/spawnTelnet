@@ -10,5 +10,8 @@ set cities {}
 lappend cities red
 lappend cities green
 
+
+lpop cities 
+
 return $cities
 }
