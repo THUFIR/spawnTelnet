@@ -7,9 +7,4 @@ package require locations 1.0
 
 set b [cities::listCities]
 
-
-
-foreach i {$b} { 
-    puts $i;
-}
-
+puts "$b"

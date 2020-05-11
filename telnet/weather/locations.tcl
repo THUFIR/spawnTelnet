@@ -24,13 +24,11 @@ foreach {c count} [array get cities ] {
 proc ::cities::listCities {} {
 
 
-set c {{x} {y} {z}}
+set cities {{x} {y} {z}}
 
-foreach i {a b c} { 
-    puts $i;
-}
-puts "end listem"
+puts "locations\n--------\n$cities"
 
+return cities
 }
 
 proc ::cities::list {} {
