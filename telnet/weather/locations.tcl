@@ -6,9 +6,7 @@ namespace eval ::cities {
 
 
 proc ::cities::dictionary {} {
-
-set cities {a b c}
-
+	set cities {1 nyc 2 bos}
 return $cities
 }
 

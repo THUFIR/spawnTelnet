@@ -7,7 +7,12 @@ package require locations 1.0
 
 set cities [cities::dictionary]
 
-puts "locations\n---------\n$cities"
+puts "locations\n---------"
+
+
+
+
+dict for {k v} $cities {puts $k=$v}
 
 
 
