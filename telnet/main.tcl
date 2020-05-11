@@ -10,6 +10,11 @@ set cities [cities::dictionary]
 puts "locations\n---------\n$cities"
 
 
+
+
+
+#pdict cities
+
 #################
 
 

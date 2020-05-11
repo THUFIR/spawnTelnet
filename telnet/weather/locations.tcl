@@ -7,14 +7,9 @@ namespace eval ::cities {
 
 proc ::cities::dictionary {} {
 
+dict set cities alice bob
 
-set names []
-#1 John 2 Mary 3 Paul
-dict append names Fred
-dict append names paul
-#1 John 2 Mary 3 Paul 4 Fred
-
-return $names
+return $cities
 }
 
 proc ::cities::listCities {} {
