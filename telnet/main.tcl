@@ -12,7 +12,7 @@ puts "locations\n---------"
 
 
 
-dict for {k v} $cities {puts $k=$v}
+dict for {k v} $cities {puts $k\t$v}
 
 
 
