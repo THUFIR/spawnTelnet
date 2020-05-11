@@ -7,8 +7,8 @@ proc ::cities::listCities {} {
 
 
 set cities {}
-lappend cities "red" 
-lappend cities "green" 
+lappend cities red
+lappend cities green
 
 return $cities
 }
