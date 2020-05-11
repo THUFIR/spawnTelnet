@@ -8,9 +8,10 @@ namespace eval ::cities {
 proc ::cities::dictionary {} {
 
 
-set names [dict create 1 John 2 Mary 3 Paul]
+set names []
 #1 John 2 Mary 3 Paul
-dict append names 4 Fred
+dict append names Fred
+dict append names paul
 #1 John 2 Mary 3 Paul 4 Fred
 
 return $names
