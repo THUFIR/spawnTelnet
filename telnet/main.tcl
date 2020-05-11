@@ -6,19 +6,10 @@ package require locations 1.0
 
 
 set cities [cities::dictionary]
-
 puts "locations\n---------"
-
-
-
-
 dict for {k v} $cities {puts $k\t$v}
 
 
-
-
-
-#pdict cities
 
 #################
 
