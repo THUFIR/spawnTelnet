@@ -14,18 +14,19 @@ proc ::wunderground::noControlFlow {city} {
     send "\r"
 
 
+    #assuming actually a dictionary of cities
     expect "or enter 3 letter forecast city code--"
     send "$city\r"
 
     expect "WEATHER UNDERGROUND MAIN MENU"
-    send "4"
+    send "1"
 
     expect "CITY FORECAST MENU"
-    send "4"
+    send "1"
 
 
     expect "Enter 3-letter city code:"
-    send "4"
+    send "nyc"
 
 
 }
