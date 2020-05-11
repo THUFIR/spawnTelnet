@@ -17,6 +17,16 @@ proc ::wunderground::noControlFlow {city} {
     expect "or enter 3 letter forecast city code--"
     send "$city\r"
 
+    expect "WEATHER UNDERGROUND MAIN MENU"
+    send "4"
+
+    expect "CITY FORECAST MENU"
+    send "4"
+
+
+    expect "Enter 3-letter city code:"
+    send "4"
+
 
 }
 
