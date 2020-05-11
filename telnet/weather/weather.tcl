@@ -13,6 +13,9 @@ proc ::wunderground::noControlFlow {city} {
     expect "Press Return to continue:"
     send "\r"
 
+    expect "Press Return for menu:"
+    send "\r"
+
 
     #assuming actually a dictionary of cities
     expect "or enter 3 letter forecast city code--"
