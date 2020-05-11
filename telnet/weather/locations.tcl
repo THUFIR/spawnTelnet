@@ -18,3 +18,15 @@ foreach {c count} [array get cities ] {
 }
 
 }
+
+
+proc ::cities::list {} {
+
+set a(0) "11"
+set a(1) "10"
+set a(2) "20"
+set a(3) "30"
+set a(4) "40"
+
+return [array get a]
+}
