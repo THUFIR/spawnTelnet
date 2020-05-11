@@ -9,4 +9,4 @@
 # full path name of this file's directory.
 
 package ifneeded weather 1.0   [list source [file join $dir weather.tcl]]
-package ifneeded locations 1.0 [list source [file join $dir cities.tcl]]
+package ifneeded locations 1.0 [list source [file join $dir locations.tcl]]

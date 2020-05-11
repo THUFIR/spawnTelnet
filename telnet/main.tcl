@@ -8,21 +8,7 @@ package require locations 1.0
 
 
 
-
-
-
-
-array set cities {
-	nyc 1
-	lon 2
-}
-
-
-puts "\n\ncities"
-puts "------"
-foreach {c count} [array get cities ] {
-   puts "$c" 
-}
+cities::loadCities
 
 
 puts "\n\n\nconnect to wunderground with:"
