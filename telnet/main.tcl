@@ -4,6 +4,13 @@ package require weather 1.0
 
 
 
+
+
+
+
+
+
+
 array set cities {
 	nyc 1
 	lon 2
@@ -23,15 +30,24 @@ puts "1)\tnoControlFlow"
 puts "2)\tconnect\n\n"
 
 
-set $prompt 1
-puts -nonewline "connection method:" $prompt; flush stdout
 
-#set a [gets stdin]
+
+puts -nonewline "connection method: "
+flush stdout
+gets stdin prompt
+puts "connecting with $prompt"
+
+
+
+
+
 
 if {$prompt == 1 } {
    wunderground::noControlFlow "nyc"
 } else {
    wunderground::connect "nyc"
 }
+
+
 
 
