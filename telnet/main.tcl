@@ -27,9 +27,9 @@ puts "connecting with $prompt"
 
 
 if {$prompt == 1 } {
-   wunderground::noControlFlow "nyc"
+   wunderground::noControlFlow $cities
 } else {
-   wunderground::connect "nyc"
+   wunderground::connect $cities
 }
 
 

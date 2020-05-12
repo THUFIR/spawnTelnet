@@ -6,12 +6,16 @@ namespace eval ::wunderground {
 
 #works
 proc ::wunderground::noControlFlow {city} {
-    variable telnet [spawn telnet rainmaker.wunderground.com]
     puts "getting weather for $city"
+
+    variable telnet [spawn telnet rainmaker.wunderground.com]
 
 
     expect "Press Return to continue:"
     send "\r"
+
+    log_file foo.log
+
 
     expect "Press Return for menu:"
     send "\r"
