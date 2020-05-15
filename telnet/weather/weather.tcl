@@ -5,7 +5,13 @@ namespace eval ::wunderground {
 }
 
 #works
-proc ::wunderground::noControlFlow {city} {
+proc ::wunderground::noControlFlow {cities} {
+
+  dict for {key value} $cities {
+    puts "  $key: $value"
+  }
+
+
     puts "getting weather for $city"
 
     variable telnet [spawn telnet rainmaker.wunderground.com]

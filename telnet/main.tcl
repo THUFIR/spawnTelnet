@@ -11,9 +11,7 @@ puts "locations\n---------"
 
 
 
-#################
-
-
+proc in {} {
 puts "\n\n\nconnect to wunderground with:"
 puts "-----------------------------"
 puts "1)\tnoControlFlow"
@@ -23,13 +21,26 @@ puts "2)\tconnect\n\n"
 puts -nonewline "connection method: "
 flush stdout
 gets stdin prompt
-puts "connecting with $prompt"
+}
 
 
-if {$prompt == 1 } {
+
+set prompt 99
+
+
+
+switch $prompt {
+   1 {
    wunderground::noControlFlow $cities
-} else {
+   }
+   2 {
    wunderground::connect $cities
+   }
+   3 {
+   }
+   default {
+     puts "infinte loop here"
+   }
 }
 
 
