@@ -40,7 +40,7 @@ switch $prompt {
    3 {
    }
    default {
-     puts "infinte loop here"
+     in
    }
 }
 }
