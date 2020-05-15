@@ -34,8 +34,7 @@ switch $prompt {
    wunderground::connect $cities
    }
    3 {
-	puts "you chose 3"
-	puts $cities[1]
+   wunderground::connect $cities
    }
    default {
      in
