@@ -15,7 +15,6 @@ set menu [list {"1.) no control"} {"2.) connect"} {"3.) cities"}]
 
 set prompt 9
 
-while {$prompt > 4} {
 switch $prompt {
    1 {
    wunderground::noControlFlow $cities
@@ -26,6 +25,7 @@ switch $prompt {
    break
    }
    3 {
+   puts "you chose 3"
    wunderground::cities $cities
    break
    }
@@ -42,7 +42,6 @@ flush stdout
 gets stdin prompt
 
    }
-}
 }
 
 
