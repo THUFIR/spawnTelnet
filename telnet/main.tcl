@@ -11,7 +11,7 @@ dict for {k v} $cities {puts $k\t$v}
 
 
 
-set menu [list {"1.) no control"} {"2.) connect"} {"3.) cities"}]
+set menu [list {1.) no control} {2.) connect} {3.) cities}]
 
 
 set prompt 9
@@ -22,7 +22,7 @@ foreach option $menu {
    puts $option
 }
 
-puts -nonewline "choice: "
+puts -nonewline "\n\nchoice: "
 flush stdout
 gets stdin prompt
 
