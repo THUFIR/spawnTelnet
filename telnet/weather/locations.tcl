@@ -6,7 +6,7 @@ namespace eval ::cities {
 
 
 proc ::cities::dictionary {} {
-	set cities {1 nyc 2 la 3 chi}
+	set cities {1 nyc 2 lax 3 chi}
 return $cities
 }
 
@@ -18,7 +18,7 @@ lappend cities red
 lappend cities green
 
 
-lpop cities 
+lpop cities
 
 return $cities
 }
