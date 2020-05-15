@@ -23,6 +23,10 @@ gets stdin prompt
 }
 
 
+set menu {list {S: save Game} {Q: Save and exit}}
+
+
+
 
 set prompt 99
 while {$prompt > 4} {
@@ -46,3 +50,22 @@ switch $prompt {
 }
 
 
+[x: exit without saving]]
+
+
+foreach option $menu {
+   puts $option
+}
+
+puts nonewline "choice \[SQXNC\]:
+flush stdout
+gets stdin choice
+
+switch exact [string toupper $choice] \
+	S{puts game save}\
+	Q{puts "quit"}\
+	default {puts "invalid $choice"};
+
+
+
+break
