@@ -34,7 +34,7 @@ proc ::wunderground::noControlFlow {city} {
     send "$city\r"
 
 
-
+    interact
 }
 
 
