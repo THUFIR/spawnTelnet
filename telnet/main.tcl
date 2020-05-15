@@ -7,31 +7,13 @@ package require locations 1.0
 
 set cities [cities::dictionary]
 puts "locations\n---------"
-#dict for {k v} $cities {puts $k\t$v}
+dict for {k v} $cities {puts $k\t$v}
 
 
 
-proc in {} {
-puts "\n\n\nconnect to wunderground with:"
-puts "-----------------------------"
-puts "1)\tnoControlFlow"
-puts "2)\tconnect"
-puts "3)\tcities\n\n"
-puts -nonewline "connection method: "
-flush stdout
-gets stdin prompt
-}
+set menu [list {"1.) no control"} {"2.) connect"} {"3.) cities"}]
 
-
-set menu [list 1 2 3]
-
-foreach option $menu {
-   puts $option
-}
-
-puts -nonewline "choice"
-flush stdout
-gets stdin prompt
+set prompt 9
 
 while {$prompt > 4} {
 switch $prompt {
@@ -44,11 +26,21 @@ switch $prompt {
    break
    }
    3 {
-   wunderground::connect $cities
+   wunderground::cities $cities
    break
    }
    default {
-     puts invalid choid $prompt
+
+puts "\n\n\n"
+
+foreach option $menu {
+   puts $option
+}
+
+puts -nonewline "choice: "
+flush stdout
+gets stdin prompt
+
    }
 }
 }
