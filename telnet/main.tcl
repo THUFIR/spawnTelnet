@@ -6,12 +6,8 @@ package require locations 1.0
 
 
 set cities [cities::dictionary]
-puts "locations\n---------"
-dict for {k v} $cities {puts $k\t$v}
 
-
-
-set menu [list {1.) no control} {2.) connect} {3.) cities}]
+set menu [list {1.) no control} {2.) connect} {3.) locations}]
 
 
 set prompt 9
@@ -27,7 +23,7 @@ flush stdout
 gets stdin prompt
 
    }
-}
+
 
 
 
@@ -39,20 +35,15 @@ gets stdin prompt
 switch $prompt {
    1 {
    wunderground::noControlFlow $cities
-   break
    }
    2 {
    wunderground::connect $cities
-   break
    }
    3 {
-   puts "you chose 3"
    wunderground::cities $cities
-   break
    }
    default {
    puts "whoops"
-   break
    }
 }
 
