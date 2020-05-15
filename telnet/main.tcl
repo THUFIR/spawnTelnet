@@ -15,9 +15,8 @@ proc in {} {
 puts "\n\n\nconnect to wunderground with:"
 puts "-----------------------------"
 puts "1)\tnoControlFlow"
-puts "2)\tconnect\n\n"
-
-
+puts "2)\tconnect"
+puts "3)\tcities\n\n"
 puts -nonewline "connection method: "
 flush stdout
 gets stdin prompt
@@ -26,10 +25,7 @@ gets stdin prompt
 
 
 set prompt 99
-
-
-
-while {$prompt > 3} {
+while {$prompt > 4} {
 switch $prompt {
    1 {
    wunderground::noControlFlow $cities
@@ -38,6 +34,8 @@ switch $prompt {
    wunderground::connect $cities
    }
    3 {
+	puts "you chose 3"
+	puts $cities[1]
    }
    default {
      in
