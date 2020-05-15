@@ -23,12 +23,16 @@ gets stdin prompt
 }
 
 
-set menu {list {S: save Game} {Q: Save and exit}}
+set menu [list 1 2 3]
 
+foreach option $menu {
+   puts $option
+}
 
+puts -nonewline "choice"
+flush stdout
+gets stdin prompt
 
-
-set prompt 99
 while {$prompt > 4} {
 switch $prompt {
    1 {
@@ -44,28 +48,11 @@ switch $prompt {
    break
    }
    default {
-     in
+     puts invalid choid $prompt
    }
 }
 }
 
 
-[x: exit without saving]]
 
 
-foreach option $menu {
-   puts $option
-}
-
-puts nonewline "choice \[SQXNC\]:
-flush stdout
-gets stdin choice
-
-switch exact [string toupper $choice] \
-	S{puts game save}\
-	Q{puts "quit"}\
-	default {puts "invalid $choice"};
-
-
-
-break
