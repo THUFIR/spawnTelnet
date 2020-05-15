@@ -67,8 +67,8 @@ proc ::wunderground::parse {city} {
 
 
 proc ::wunderground::cities {cities} {
-     puts "\n\nlocations\n---------"
-     dict for {k v} $cities {puts $k\t$v}
+#     puts "\n\nlocations\n---------"
+#     dict for {k v} $cities {puts $k\t$v}
      set city [dict get $cities 2]
-     return city
+     return $city
 }

@@ -40,7 +40,7 @@ switch $prompt {
    wunderground::connect $cities
    }
    3 {
-   puts "[wunderground::cities $cities]"
+   puts "using:\t\t[wunderground::cities $cities]"
    }
    default {
    puts "whoops"
