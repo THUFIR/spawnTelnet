@@ -63,3 +63,10 @@ proc ::wunderground::parse {city} {
     interact -i $telnet
 }
 
+
+
+
+proc ::wunderground::cities {cities} {
+     puts "locations\n---------"
+     dict for {k v} $cities {puts $k\t$v}
+}
