@@ -29,12 +29,15 @@ while {$prompt > 4} {
 switch $prompt {
    1 {
    wunderground::noControlFlow $cities
+   break
    }
    2 {
    wunderground::connect $cities
+   break
    }
    3 {
    wunderground::connect $cities
+   break
    }
    default {
      in
