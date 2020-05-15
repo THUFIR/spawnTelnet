@@ -13,7 +13,28 @@ dict for {k v} $cities {puts $k\t$v}
 
 set menu [list {"1.) no control"} {"2.) connect"} {"3.) cities"}]
 
+
 set prompt 9
+while {$prompt > 3} {
+puts "\n\n\n"
+
+foreach option $menu {
+   puts $option
+}
+
+puts -nonewline "choice: "
+flush stdout
+gets stdin prompt
+
+   }
+}
+
+
+
+
+
+
+
 
 switch $prompt {
    1 {
@@ -30,19 +51,11 @@ switch $prompt {
    break
    }
    default {
-
-puts "\n\n\n"
-
-foreach option $menu {
-   puts $option
-}
-
-puts -nonewline "choice: "
-flush stdout
-gets stdin prompt
-
+   puts "whoops"
+   break
    }
 }
+
 
 
 
