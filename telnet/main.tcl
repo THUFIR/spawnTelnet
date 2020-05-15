@@ -29,6 +29,7 @@ set prompt 99
 
 
 
+while {$prompt > 3} {
 switch $prompt {
    1 {
    wunderground::noControlFlow $cities
@@ -42,6 +43,6 @@ switch $prompt {
      puts "infinte loop here"
    }
 }
-
+}
 
 
