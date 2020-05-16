@@ -7,12 +7,10 @@ namespace eval ::wunderground {
 #works
 proc ::wunderground::noControlFlow {cities} {
 
-  dict for {key value} $cities {
-    puts "  $key: $value"
-  }
+     set city [dict get $cities 2]
 
 
-    puts "getting weather for $city"
+    puts "\n\ngetting weather for $city\n\n"
 
     variable telnet [spawn telnet rainmaker.wunderground.com]
 
@@ -25,12 +23,28 @@ proc ::wunderground::noControlFlow {cities} {
     expect "or enter 3 letter forecast city code--"
     send "$city\r"
 
+    expect "Press Return to continue, M to return to menu, X to exit:"
+    send "m\r"
+
+    expect "Selection:"
+    send "1\r"
+
+    expect "or enter 3 letter forecast city code--"
+    send "nyc\r"
+
+    expect "Press Return to continue, M to return to menu, X to exit:"
+    send "x\r"
+
+
 
     interact
 }
 
 
-
+#m
+#1
+#nyc
+#x
 
 #seems to run
 proc ::wunderground::connect {city} {
