@@ -7,7 +7,9 @@ namespace eval ::wunderground {
 #works
 proc ::wunderground::noControlFlow {cities} {
 
-     set city [dict get $cities 2]
+     set lax [dict get $cities 1]
+     set nyc [dict get $cities 2]
+     set chi [dict get $cities 3]
 
 
     puts "\n\ngetting weather for $city\n\n"
@@ -21,7 +23,11 @@ proc ::wunderground::noControlFlow {cities} {
 
 
     expect "or enter 3 letter forecast city code--"
-    send "$city\r"
+    send "$nyc\r"
+
+
+
+###########
 
     expect "Press Return to continue, M to return to menu, X to exit:"
     send "m\r"
@@ -30,7 +36,21 @@ proc ::wunderground::noControlFlow {cities} {
     send "1\r"
 
     expect "Enter 3-letter city code:"
-    send "nyc\r"
+    send "lax\r"
+
+##########
+
+    expect "Press Return to continue, M to return to menu, X to exit:"
+    send "m\r"
+
+    expect "Selection:"
+    send "1\r"
+
+    expect "Enter 3-letter city code:"
+    send "chi\r"
+
+
+###########
 
     expect "Press Return to continue, M to return to menu, X to exit:"
     send "x\r"
@@ -67,8 +87,9 @@ proc ::wunderground::parse {city} {
 
 
 proc ::wunderground::cities {cities} {
-#     puts "\n\nlocations\n---------"
-#     dict for {k v} $cities {puts $k\t$v}
+     puts "\n\nlocations\n---------"
+     dict for {k v} $cities {puts $k\t$v}
+     puts "\n\nlocation\n---------"
      set city [dict get $cities 2]
      return $city
 }
