@@ -60,37 +60,7 @@ proc ::wunderground::noControlFlow {cities} {
 
     expect "Press Return to continue, M to return to menu, X to exit:"
     send "x\r"
-
-
-
-    interact
 }
-
-
-#m
-#1
-#nyc
-#x
-
-#seems to run
-proc ::wunderground::connect {city} {
-    global spawn_id
-    variable telnet [spawn telnet rainmaker.wunderground.com]
-    puts "getting weather for $city"
-    parse $city
-}
-
-
-#hangs after the puts; no telnet connection output
-proc ::wunderground::parse {city} {
-    global spawn_id
-    puts "received $city"
-    variable telnet
-    interact -i $telnet
-}
-
-
-
 
 proc ::wunderground::cities {cities} {
      puts "\n\nlocations\n---------"
