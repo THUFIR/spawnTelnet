@@ -29,7 +29,7 @@ proc ::wunderground::noControlFlow {cities} {
     expect "Selection:"
     send "1\r"
 
-    expect "or enter 3 letter forecast city code--"
+    expect "Enter 3-letter city code: nyc"
     send "nyc\r"
 
     expect "Press Return to continue, M to return to menu, X to exit:"
