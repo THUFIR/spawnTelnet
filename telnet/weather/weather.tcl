@@ -4,13 +4,7 @@ package require Expect
 namespace eval ::wunderground {
 }
 
-#works
 proc ::wunderground::noControlFlow {cities} {
-
-#     set nyc [dict get $cities 1]
-#     set lax [dict get $cities 2]
-#     set chi [dict get $cities 3]
-
 
     puts "\n\ngetting weather for [dict get $cities 1]\n\n"
 
@@ -29,7 +23,7 @@ proc ::wunderground::noControlFlow {cities} {
 
 ###########
 
-    puts "\n\ngetting weather for [dict get $cities 1]\n\n"
+    puts "\n\ngetting weather for [dict get $cities 2]\n\n"
 
 
     expect "Press Return to continue, M to return to menu, X to exit:"
@@ -39,11 +33,11 @@ proc ::wunderground::noControlFlow {cities} {
     send "1\r"
 
     expect "Enter 3-letter city code:"
-    send "[dict get $cities 1]\r"
+    send "[dict get $cities 2]\r"
 
 ##########
 
-    puts "\n\ngetting weather for [dict get $cities 1]\n\n"
+    puts "\n\ngetting weather for [dict get $cities 3]\n\n"
 
 
     expect "Press Return to continue, M to return to menu, X to exit:"
@@ -53,7 +47,7 @@ proc ::wunderground::noControlFlow {cities} {
     send "1\r"
 
     expect "Enter 3-letter city code:"
-    send "[dict get $cities 1]\r"
+    send "[dict get $cities 3]\r"
 
 
 ###########
