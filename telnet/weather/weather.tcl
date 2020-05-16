@@ -1,4 +1,4 @@
-package provide weather  1.0
+\package provide weather  1.0
 package require Expect
 
 namespace eval ::wunderground {
@@ -29,7 +29,7 @@ proc ::wunderground::noControlFlow {cities} {
     expect "Selection:"
     send "1\r"
 
-    expect "Enter 3-letter city code: nyc"
+    expect "Enter 3-letter city code:"
     send "nyc\r"
 
     expect "Press Return to continue, M to return to menu, X to exit:"
